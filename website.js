@@ -16,6 +16,8 @@ var smtpTransport = nodemailer.createTransport({
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
+app.set('port', (process.env.PORT || 5000));
+
 app.get('/',function(req, res){
   res.sendFile(__dirname + '\\src\\' + 'index.html');
 });
@@ -56,6 +58,6 @@ app.use('*',function(req, res){
   res.send('Error 404: Not Found!');
 });
  
-app.listen(3000, function(){
-  console.log("Server running at Port 3000");
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
