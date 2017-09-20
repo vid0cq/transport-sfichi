@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/',function(req, res){
-  res.sendFile(__dirname + '\\src\\' + 'index.html');
+  res.sendFile(__dirname + '/src/' + 'index.html');
 });
 
 // POST
