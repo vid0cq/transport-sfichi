@@ -1,0 +1,16 @@
+.navbar {
+  border-bottom: #008ed6 3px solid; }
+
+body {
+  padding-top: 54px; }
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px; } }
+
+section {
+  padding: 1px 0; }
+
+.social-icon > a {
+  color: inherit;
+  text-decoration: none; }
