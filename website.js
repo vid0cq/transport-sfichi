@@ -22,6 +22,10 @@ app.get('/',function(req, res){
   res.sendFile(__dirname + '/src/' + 'index.html');
 });
 
+app.get('/ro',function(req, res){
+  res.sendFile(__dirname + '/src/' + 'index-ro.html');
+});
+
 // POST
 app.post('/', function(req, res) {
 	console.log(req.body.email);
@@ -51,8 +55,9 @@ app.post('/', function(req, res) {
 	
 });
 
-app.use('/styles', express.static(__dirname + '/src/css'));
-app.use('/scripts', express.static(__dirname + '/src/js'));
+app.use('/css', express.static(__dirname + '/src/css'));
+app.use('/js', express.static(__dirname + '/src/js'));
+app.use('/flags', express.static(__dirname + '/src/flags'));
 
 app.use('*',function(req, res){
   res.send('Error 404: Not Found!');

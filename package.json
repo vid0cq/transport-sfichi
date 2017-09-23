@@ -12,6 +12,7 @@
     "body-parser": "^1.18.1",
     "bootstrap": "4.0.0-beta",
     "express": "^4.15.4",
+    "flag-icon-css": "^2.8.0",
     "jquery": "^3.2.1",
     "jquery-easing": "0.0.1",
     "nodemailer": "^4.1.0",

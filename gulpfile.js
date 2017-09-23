@@ -31,13 +31,18 @@ gulp.task('serve', ['sass'], function() {
 // Move Fonts to src/fonts
 gulp.task('fonts', function() {
   return gulp.src('node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest('src/fonts'))
+    .pipe(gulp.dest('src/fonts'));
 })
 
-// Move Font Awesome CSS to src/css
-gulp.task('fa', function() {
-  return gulp.src('node_modules/font-awesome/css/font-awesome.min.css')
-    .pipe(gulp.dest('src/css'))
+// Move Font Awesome CSS and flag-icon-css to src/css
+gulp.task('css-third-party', function() {
+  return gulp.src(['node_modules/font-awesome/css/font-awesome.min.css','node_modules/flag-icon-css/css/flag-icon.min.css'])
+    .pipe(gulp.dest('src/css'));
 })
 
-gulp.task('default', ['js','serve', 'fa', 'fonts']);
+gulp.task('img-third-party', function() {
+  return gulp.src(['node_modules/flag-icon-css/flags/4x3/gb.svg','node_modules/flag-icon-css/flags/4x3/ro.svg'])
+    .pipe(gulp.dest('src/flags/4x3/'));
+})
+
+gulp.task('default', ['js','serve', 'css-third-party', 'img-third-party', 'fonts']);
