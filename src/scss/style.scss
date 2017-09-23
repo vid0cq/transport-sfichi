@@ -7,6 +7,10 @@ $primary-color: #008ed6;
 	border-bottom: $primary-color 3px solid;
 }
 
+.dropdown-toggle::after {
+	color: $font-color;
+}
+
 body {
   padding-top: 54px;
 }
