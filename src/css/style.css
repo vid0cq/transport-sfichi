@@ -1,8 +1,8 @@
 .navbar {
-  border-bottom: #008ed6 5px solid; }
+  border-bottom: #008ed6 0.3rem solid; }
 
 .py-5 {
-  border-top: #008ed6 5px solid; }
+  border-top: #008ed6 0.3rem solid; }
 
 .dropdown-toggle::after {
   color: #fff; }
@@ -19,10 +19,6 @@ a.bg-dark:focus, a.bg-dark:hover {
 body {
   padding-top: 54px; }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px; } }
-
 section {
   padding: 1px 0; }
 
@@ -31,4 +27,16 @@ section {
   text-decoration: none; }
 
 hr {
-  border-top: 2px solid #008ed6; }
+  border-top: 2px solid #008ed6;
+  margin-top: 0em;
+  margin-bottom: 0em; }
+
+.mt-03 {
+  margin-top: 0.3rem !important; }
+
+@font-face {
+  font-family: brandfont;
+  src: url("/fonts/CAC_____.ttf"); }
+
+.brandfont {
+  font-family: brandfont; }

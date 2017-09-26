@@ -2,14 +2,15 @@
 $bg-color: #333;
 $font-color: #fff;
 $primary-color: #008ed6;	
+$border-header-footer: 0.3rem;
 
 .navbar{
-	border-bottom: $primary-color 5px solid;
+	border-bottom: $primary-color $border-header-footer solid;
 }
 
 .py-5
 {
-	border-top: $primary-color 5px solid;
+	border-top: $primary-color $border-header-footer solid;
 }
 
 .dropdown-toggle::after {
@@ -33,11 +34,11 @@ body {
   padding-top: 54px;
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
+//@media (min-width: 992px) {
+//  body {
+//    padding-top: 56px;
+//  }
+//}
 
 section {
   padding: 1px 0;
@@ -49,4 +50,18 @@ section {
 }
 
 hr {
-  border-top: 2px solid $primary-color; }
+  border-top: 2px solid $primary-color; 
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.mt-03 {
+  margin-top: 0.3rem !important; }
+
+
+//custom font for company name-not used
+//@font-face { font-family: brandfont; src: url('/fonts/CAC_____.ttf'); } 
+//.brandfont
+//{
+//	font-family: brandfont;
+//}
