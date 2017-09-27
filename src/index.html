@@ -140,108 +140,100 @@
 					<div class="col-md-12 text-center">
 						<p class="h2 mb-5">CONTACT</p>
 					</div>
-					<div class="contact-us">
-						<div class="container">
-							<div class="contact-form">
+					<div class="col-lg-7">                  
+						<form id="ajax-contact"  method="post" action="/" role="form">
+							<div class="messages" id="form-messages"></div>
+							<div class="controls">
 								<div class="row">
-									<div class="col-lg-7">                  
-										<form id="ajax-contact"  method="post" action="/" role="form">
-											<div class="messages" id="form-messages"></div>
-											<div class="controls">
-												<div class="row">
-													<div class="col-md-6">
-														<div class="form-group">
-															<label for="form_name">First name *</label>
-															<input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Firstname is required.">
-															<div class="help-block with-errors"></div>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group">
-															<label for="form_lastname">Last name *</label>
-															<input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Lastname is required.">
-															<div class="help-block with-errors"></div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="form-group">
-															<label for="form_email">Email *</label>
-															<input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required.">
-															<div class="help-block with-errors"></div>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group">
-															<label for="form_phone">Phone *</label>
-															<input id="form_phone" type="tel" name="phone"  class="form-control" required oninvalid="setCustomValidity('Please enter a phone number')"
-																   onchange="try{setCustomValidity('')}catch(e){}">
-
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<div class="form-group">
-															<label for="form_message">Your Message *</label>
-															<textarea id="form_message" name="message" class="form-control" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-															<div class="help-block with-errors"></div>
-														</div>
-													</div>
-													<div class="col-md-12">
-														<input type="submit" class="btn btn-primary" value="Send message">
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<br>
-														<small class="text-muted"><strong>*</strong> Mandatory fields.</small>
-													</div>
-												</div>
-											</div>
-
-										</form>
-
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="form_name">First name *</label>
+											<input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Firstname is required.">
+											<div class="help-block with-errors"></div>
+										</div>
 									</div>
-									<div class="col-lg-5">                   
-										<div class="row col1">
-											<div class="col-sm-4">
-												<i class="fa fa-phone fa-fw" aria-hidden="true"></i>&nbsp;Phone
-											</div>
-											<div class="col-sm-8">
-												+40 723 726 943
-											</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="form_lastname">Last name *</label>
+											<input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Lastname is required.">
+											<div class="help-block with-errors"></div>
 										</div>
-										<div class="row col1">
-											<div class="col-sm-4">
-												<i class="fa fa-whatsapp fa-fw" aria-hidden="true"></i>&nbsp;Whatsapp
-											</div>
-											<div class="col-sm-8">
-												+40 723 726 943
-											</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="form_email">Email *</label>
+											<input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required.">
+											<div class="help-block with-errors"></div>
 										</div>
-										<div class="row col1">
-											<div class="col-sm-4">
-												<i class="fa fa-envelope fa-fw" aria-hidden="true"></i>&nbsp;Email
-											</div>
-											<div class="col-sm-8">
-												<a href="mailto:info@yourdomain.com">info@yourdomain.com</a> <br> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
-											</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="form_phone">Phone *</label>
+											<input id="form_phone" type="tel" name="phone"  class="form-control" required oninvalid="setCustomValidity('Please enter a phone number')"
+												   onchange="try{setCustomValidity('')}catch(e){}">
+
 										</div>
-										<div class="row col1">
-											<div class="col-sm-4">
-												<i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>&nbsp;Address
-											</div>
-											<div class="col-sm-8">
-												Str. Crizantemelor nr. 10 Arad, jud. Arad, 310319
-											</div>
-										</div><br>
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.529304362084!2d21.35904611597665!3d46.18002477911592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4745999122c04c39%3A0x5810fb8a2f7813eb!2sCrizantemelor+10%2C+Arad+317405!5e0!3m2!1sro!2sro!4v1504946811710" width="100%" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="form_message">Your Message *</label>
+											<textarea id="form_message" name="message" class="form-control" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<input type="submit" class="btn btn-primary" value="Send message">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<br>
+										<small class="text-muted"><strong>*</strong> Mandatory fields.</small>
 									</div>
 								</div>
 							</div>
+
+						</form>
+
+					</div>
+					<div class="col-lg-5">                   
+						<div class="row col1">
+							<div class="col-sm-4">
+								<i class="fa fa-phone fa-fw" aria-hidden="true"></i>&nbsp;Phone
+							</div>
+							<div class="col-sm-8">
+								+40 723 726 943
+							</div>
 						</div>
+						<div class="row col1">
+							<div class="col-sm-4">
+								<i class="fa fa-whatsapp fa-fw" aria-hidden="true"></i>&nbsp;Whatsapp
+							</div>
+							<div class="col-sm-8">
+								+40 723 726 943
+							</div>
+						</div>
+						<div class="row col1">
+							<div class="col-sm-4">
+								<i class="fa fa-envelope fa-fw" aria-hidden="true"></i>&nbsp;Email
+							</div>
+							<div class="col-sm-8">
+								<a href="mailto:info@yourdomain.com">info@yourdomain.com</a> <br> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+							</div>
+						</div>
+						<div class="row col1">
+							<div class="col-sm-4">
+								<i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>&nbsp;Address
+							</div>
+							<div class="col-sm-8">
+								Str. Crizantemelor nr. 10 Arad, jud. Arad, 310319
+							</div>
+						</div><br>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.529304362084!2d21.35904611597665!3d46.18002477911592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4745999122c04c39%3A0x5810fb8a2f7813eb!2sCrizantemelor+10%2C+Arad+317405!5e0!3m2!1sro!2sro!4v1504946811710" width="100%" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>

@@ -33,10 +33,3 @@ hr {
 
 .mt-03 {
   margin-top: 0.3rem !important; }
-
-@font-face {
-  font-family: brandfont;
-  src: url("/fonts/CAC_____.ttf"); }
-
-.brandfont {
-  font-family: brandfont; }
