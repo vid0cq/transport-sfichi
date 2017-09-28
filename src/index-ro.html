@@ -4,9 +4,9 @@
 	<head>
 
 		<meta charset="utf-8">
-<!--		<link rel=“alternate” href=“http://www.website.com/ hreflang=“x- default” />-->
-<!--		<link rel="alternate" href="http://www.website.com/ro/" hreflang="ro-RO" />-->
-		
+		<!--		<link rel=“alternate” href=“http://www.website.com/ hreflang=“x- default” />-->
+		<!--		<link rel="alternate" href="http://www.website.com/ro/" hreflang="ro-RO" />-->
+
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -150,14 +150,14 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="form_name">Prenume *</label>
-											<input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Firstname is required.">
+											<input id="form_name" type="text" name="name" class="form-control" required="required" oninvalid="setCustomValidity('Prenumele este un câmp obligatoriu.')" oninput="setCustomValidity('')">
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="form_lastname">Nume *</label>
-											<input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Lastname is required.">
+											<input id="form_lastname" type="text" name="surname" class="form-control" required="required" oninvalid="setCustomValidity('Numele este un câmp obligatoriu.')" oninput="setCustomValidity('')">
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
@@ -166,15 +166,14 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="form_email">Email *</label>
-											<input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required.">
+											<input id="form_email" type="email" name="email" class="form-control" required="required" oninvalid="validateEmail(this);" oninput="validateEmail(this);">
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="form_phone">Telefon *</label>
-											<input id="form_phone" type="tel" name="phone"  class="form-control" required oninvalid="setCustomValidity('Introduceti un numar de telefon')"
-												   onchange="try{setCustomValidity('')}catch(e){}">
+											<input id="form_phone" type="tel" name="phone"  class="form-control" required oninvalid="setCustomValidity('Telefonul este un câmp obligatoriu.')" oninput="setCustomValidity('')">
 
 										</div>
 									</div>
@@ -183,7 +182,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label for="form_message">Mesajul dumneavoastră *</label>
-											<textarea id="form_message" name="message" class="form-control" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+											<textarea id="form_message" name="message" class="form-control" rows="4" required="required" oninvalid="setCustomValidity('Vă rugăm lăsați-ne un mesaj.')" oninput="setCustomValidity('')"></textarea>
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
@@ -308,6 +307,18 @@
 		<script src="https://use.fontawesome.com/2b0bea5ed6.js"></script>
 
 		<script>
+			function validateEmail(emailInput) {
+				if (emailInput.value == '') {
+					emailInput.setCustomValidity('Email-ul este un câmp obligatoriu.');
+				}
+				else if(emailInput.validity.typeMismatch){  
+					emailInput.setCustomValidity(emailInput.value + " nu este un email valid.");
+				}
+				else {
+					emailInput.setCustomValidity("");  
+				};
+				return true;
+			}  
 			$(document).ready(function  () {
 				$("#ajax-contact").on("submit",function(e) {
 					e.preventDefault();
@@ -322,7 +333,7 @@
 						console.log('eror');
 						$("#errorModal").modal('show');
 					});
-				})
+				});
 			});
 		</script>
 
